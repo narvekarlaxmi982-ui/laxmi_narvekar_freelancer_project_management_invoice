@@ -1,8 +1,2 @@
-DB_USERNAME = "postgres"
-DB_PASSWORD = "Laxmi@2689"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-DB_NAME = "freelancer_management_db"
-
-SQLALCHEMY_DATABASE_URI = f"postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+SQLALCHEMY_DATABASE_URI = "sqlite:///freelancer_management.db"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
