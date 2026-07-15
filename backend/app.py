@@ -453,15 +453,19 @@ def download_invoice(filename):
 
 # CREATE TABLES
 with app.app_context():
-    db.create_all()
+    try:
+        db.create_all()
+        print("✅ Tables created successfully!")
+    except Exception as e:
+        print("❌ Database Error:")
+        print(e)
 
 
 # RUN APPLICATION
 import os
 
-print("Database location:")
+print("Connected Database:")
 print(app.config["SQLALCHEMY_DATABASE_URI"])
-print(os.path.abspath("instance/freelancer_management.db"))
 if __name__ == "__main__":
     app.run(debug=True)
 
