@@ -77,6 +77,60 @@ FreelancerCRM/
 ```
 
 ---
+## Database design
+1. Users Table
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
+
+This table stores user account details such as name, email, and password.
+
+2. Projects Table
+CREATE TABLE projects (
+    id INTEGER PRIMARY KEY,
+    title VARCHAR(200),
+    description TEXT,
+    status VARCHAR(50)
+);
+
+This table stores project details including project title, description, and current status.
+
+3. Milestones Table
+CREATE TABLE milestones (
+    id INTEGER PRIMARY KEY,
+    project_id INTEGER,
+    title VARCHAR(200),
+    status VARCHAR(50),
+    FOREIGN KEY (project_id) REFERENCES projects(id)
+);
+
+This table stores milestone details and connects each milestone with its related project.
+
+4. Time Logs Table
+CREATE TABLE time_logs (
+    id INTEGER PRIMARY KEY,
+    project_id INTEGER,
+    hours FLOAT,
+    work_description TEXT,
+    FOREIGN KEY (project_id) REFERENCES projects(id)
+);
+
+This table stores the working hours and work details recorded for each project.
+
+5. Invoices Table
+CREATE TABLE invoices (
+    id INTEGER PRIMARY KEY,
+    project_id INTEGER,
+    total_hours FLOAT,
+    hourly_rate FLOAT,
+    total_amount FLOAT,
+    FOREIGN KEY (project_id) REFERENCES projects(id)
+);
+
+This table stores invoice details such as total hours, hourly rate, and calculated invoice amount.
 
 ## ⚙ Installation
 
