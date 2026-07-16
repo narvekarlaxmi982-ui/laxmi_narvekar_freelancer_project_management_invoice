@@ -170,8 +170,7 @@ const handleAddProject = async () => {
  <button
   onClick={handleAddProject}
   style={{
-    backgroundColor: darkMode ? "#1e293b" : "white",
-    color: darkMode ? "white" : "black",
+    backgroundColor: "#2563eb",
     color: "white",
     padding: "10px 20px",
     border: "none",
