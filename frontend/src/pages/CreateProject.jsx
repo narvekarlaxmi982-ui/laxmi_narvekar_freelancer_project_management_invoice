@@ -9,7 +9,7 @@ function CreateProject() {
     e.preventDefault();
 
     try {
-      await axios.post("http://127.0.0.1:5000/create-project", {
+      await axios.post("https://laxmi-freelancer-backend.onrender.com/create-project", {
         title,
         description,
         status: "Pending"

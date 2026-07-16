@@ -20,11 +20,11 @@ function Milestones({darkMode}) {
   const fetchData = async () => {
     try {
       const projectRes = await axios.get(
-        "http://127.0.0.1:5000/projects"
+        "https://laxmi-freelancer-backend.onrender.com/projects"
       );
 
       const milestoneRes = await axios.get(
-        "http://127.0.0.1:5000/milestones"
+        "https://laxmi-freelancer-backend.onrender.com/milestones"
       );
       console.log("Projects received:", projectRes.data);
       setProjects(projectRes.data);
@@ -40,7 +40,7 @@ function Milestones({darkMode}) {
 
     try {
       await axios.post(
-        "http://127.0.0.1:5000/create-milestone",
+        "https://laxmi-freelancer-backend.onrender.com/create-milestone",
         {
           project_id: projectId,
           title,
@@ -69,7 +69,7 @@ function Milestones({darkMode}) {
   const handleSave = async (id) => {
     try {
       const response = await axios.put(
-        `http://127.0.0.1:5000/update-milestone/${id}`,
+        `https://laxmi-freelancer-backend.onrender.com/update-milestone/${id}`,
         {
           title: editTitle,
           status: editStatus,

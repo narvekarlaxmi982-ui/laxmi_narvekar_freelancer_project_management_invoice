@@ -12,7 +12,7 @@ function Invoice({ darkMode }) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/projects")
+      .get("https://laxmi-freelancer-backend.onrender.com/projects")
       .then((response) => {
         setProjects(response.data);
       })
@@ -26,7 +26,7 @@ function Invoice({ darkMode }) {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/generate-invoice",
+        "https://laxmi-freelancer-backend.onrender.com/generate-invoice",
         {
           project_id: projectId,
           hourly_rate: hourlyRate,
@@ -189,7 +189,7 @@ function Invoice({ darkMode }) {
               const filename = pdfFile.split("/").pop();
 
               window.open(
-                `http://127.0.0.1:5000/download-invoice/${filename}`,
+                `https://laxmi-freelancer-backend.onrender.com/download-invoice/${filename}`,
                 "_blank"
               );
             }}

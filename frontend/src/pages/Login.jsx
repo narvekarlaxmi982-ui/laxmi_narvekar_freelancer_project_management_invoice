@@ -7,7 +7,7 @@ function Login() {
     const handleLogin = async () => {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:5000/login",
+      "https://laxmi-freelancer-backend.onrender.com/login",
       {
         email: email,
         password: password,

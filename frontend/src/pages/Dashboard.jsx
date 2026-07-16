@@ -12,10 +12,10 @@ function Dashboard({darkMode}) {
 
 const fetchData = async () => {
   try {
-    const projectRes = await axios.get("http://127.0.0.1:5000/projects");
-    const timeLogRes = await axios.get("http://127.0.0.1:5000/time-logs");
-    const milestoneRes = await axios.get("http://127.0.0.1:5000/milestones");
-    const invoiceRes = await axios.get("http://127.0.0.1:5000/invoices");
+    const projectRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/projects");
+    const timeLogRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/time-logs");
+    const milestoneRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/milestones");
+    const invoiceRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/invoices");
     setProjects(projectRes.data);
     setTimeLogs(timeLogRes.data);
     setMilestones(milestoneRes.data);

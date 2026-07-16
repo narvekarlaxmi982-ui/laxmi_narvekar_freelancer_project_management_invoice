@@ -18,8 +18,8 @@ useEffect(() => {
 
 const fetchData = async () => {
   try {
-    const projectRes = await axios.get("http://127.0.0.1:5000/projects");
-    const timeLogRes = await axios.get("http://127.0.0.1:5000/time-logs");
+    const projectRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/projects");
+    const timeLogRes = await axios.get("https://laxmi-freelancer-backend.onrender.com/time-logs");
 
     setProjects(projectRes.data);
     setTimeLogs(timeLogRes.data);
@@ -34,7 +34,7 @@ const fetchData = async () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://127.0.0.1:5000/time-log", {
+      await axios.post("https://laxmi-freelancer-backend.onrender.com/time-log", {
         project_id: projectId,
         hours: hours,
         work_description: workDescription,
@@ -48,7 +48,7 @@ const fetchData = async () => {
 
       // Refresh logs
       const response = await axios.get(
-        "http://127.0.0.1:5000/time-logs"
+        "https://laxmi-freelancer-backend.onrender.com/time-logs"
       );
 
       setTimeLogs(response.data);

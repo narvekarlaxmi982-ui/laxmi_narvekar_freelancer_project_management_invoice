@@ -9,7 +9,7 @@ function Register() {
   const handleRegister = async () => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:5000/register",
+        "https://laxmi-freelancer-backend.onrender.com/register",
         {
           name,
           email,

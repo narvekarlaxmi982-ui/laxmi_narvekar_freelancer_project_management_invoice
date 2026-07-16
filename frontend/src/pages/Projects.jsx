@@ -16,7 +16,7 @@ function Projects({darkMode}) {
   // GET PROJECTS
   useEffect(() => {
   axios
-    .get("http://127.0.0.1:5000/projects")
+    .get("https://laxmi-freelancer-backend.onrender.com/projects")
     .then((response) => {
       console.log("Projects received:", response.data);
       setProjects(response.data);
@@ -29,7 +29,7 @@ function Projects({darkMode}) {
 const handleAddProject = async () => {
   try {
     const response = await axios.post(
-      "http://127.0.0.1:5000/create-project",
+      "https://laxmi-freelancer-backend.onrender.com/create-project",
       {
         title: title,
         description: description,
@@ -54,7 +54,7 @@ const handleAddProject = async () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://127.0.0.1:5000/delete-project/${id}`
+        `https://laxmi-freelancer-backend.onrender.com/delete-project/${id}`
       );
 
       alert("Project Deleted Successfully");
@@ -79,7 +79,7 @@ const handleAddProject = async () => {
   const handleSave = async (id) => {
     try {
       const response = await axios.put(
-        `http://127.0.0.1:5000/update-project/${id}`,
+        `https://laxmi-freelancer-backend.onrender.com/update-project/${id}`,
         {
           title: editTitle,
           description: editDescription,

@@ -14,22 +14,22 @@ function Analytics({ darkMode }) {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/projects")
+      .get("https://laxmi-freelancer-backend.onrender.com/projects")
       .then((response) => setProjects(response.data))
       .catch((error) => console.log(error));
 
     axios
-      .get("http://127.0.0.1:5000/invoices")
+      .get("https://laxmi-freelancer-backend.onrender.com/invoices")
       .then((response) => setInvoices(response.data))
       .catch((error) => console.log(error));
 
     axios
-      .get("http://127.0.0.1:5000/time-logs")
+      .get("https://laxmi-freelancer-backend.onrender.com/time-logs")
       .then((response) => setTimeLogs(response.data))
       .catch((error) => console.log(error));
 
     axios
-      .get("http://127.0.0.1:5000/milestones")
+      .get("https://laxmi-freelancer-backend.onrender.com/milestones")
       .then((response) => setMilestones(response.data))
       .catch((error) => console.log(error));
   }, []);
