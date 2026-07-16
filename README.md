@@ -46,7 +46,7 @@ Freelancer CRM System is a web-based application developed to help freelancers e
 - Flask CORS
 
 ### Database
-- SQLite
+- PostgreSQL
 
 ### Development Tools
 - VS Code
