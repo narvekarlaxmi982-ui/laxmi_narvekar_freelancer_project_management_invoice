@@ -80,12 +80,6 @@ FreelancerCRM/
 
 ## ⚙ Installation
 
-### Clone Repository
-
-```bash
-git clone https://github.com/yourusername/freelancer-crm.git
-```
-
 ### Backend
 
 ```bash
